@@ -1,16 +1,62 @@
+@media only screen and (max-width: 500px) {
+	.demo-card-wide{
+		width: 90% !important;
+		margin-bottom: 3rem;
+	}
+	.mdl-layout__drawer{
+		width: 80%;
+		/*background-color: #373a3c;*/
+		background-color: #ff0;
+		color:	#efefef;
+	}
+}
 
+
+.page-title{
+	margin-left: 35%;
+	margin-top: 2em;
+	margin-bottom: 3em;
+}
 
 /*# sourceMappingURL=styles.css.map */
 .demo-card-wide{
-	width: 100% !important;
+	width: 55% !important;
+	margin-bottom: 3rem;
+	margin-top: 2rem;
+	margin-left: 35%;
 }
+
+
+.mdl-layout__drawer{
+	width: 20%;
+	background-color: #373a3c;
+	color:	#efefef;
+}
+
+
+
+
 #homeIndexGroupList h2{
 	color: #d9d9d9!important;
 }
-.demo-card-wide > .mdl-card__title {
+.demo-card-wide > .mdl-card__title#soccor{
   /*color: rgb(63,81,181);*/
   height: 176px;
+  /*background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../theme_img/soccer_theme.jpg') center / cover;*/
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../theme_img/soccer_theme.jpg') center / cover;
+  /*background-color: #00796B;*/
+}
+.demo-card-wide > .mdl-card__title#camp {
+  /*color: rgb(63,81,181);*/
+  height: 176px;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../theme_img/camping.jpg') center / cover;
+  /*background-color: #00796B;*/
+}
+.demo-card-wide > .mdl-card__title#class {
+  /*color: rgb(63,81,181);*/
+  height: 176px;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../theme_img/class.jpg') center / cover;
+  /*background-color: #00796B;*/
 }
 .demo-card-wide > .mdl-card__menu {
   color: #d9d9d9;  
@@ -23,4 +69,157 @@ figcaption{
 	display: block;
     margin-left: auto;
     margin-right: auto
+}
+.card-body{
+	margin: 10px 20px;
+	font-size: medium;
+}
+
+#avatar{
+	background-color: #00796B;
+	width: 70px;
+	height: 70px;
+	max-height: 70px;
+	max-width: 70px;
+}
+
+/* start of Calendar Icon */
+time.icon
+{
+  font-size: .8em; /* change icon size */
+  display: block;
+  position: relative;
+  width: 7em;
+  height: 7em;
+  background-color: #fff;
+  border-radius: 0.6em;
+  box-shadow: 0 1px 0 #bdbdbd, 0 0 0 1px #bdbdbd;
+  overflow: hidden;
+}
+time.icon *
+{
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+}
+time.icon strong
+{
+  position: absolute;
+  top: 0;
+  padding: 0.4em 0;
+  color: #fff;
+  background-color: #95a5a6;
+  /*border-bottom: 1px dashed #f37302;*/
+  box-shadow: 0 2px 0 #95a5a6;
+}
+
+time.icon em
+{
+  position: absolute;
+  bottom: 0.1em;
+  color: #95a5a6;
+}
+
+time.icon span
+{
+  font-size: 1.8em;
+  letter-spacing: -0.05em;
+  /*padding-top: 0.8em;*/
+  margin-top: 1.8em;
+  color: #2f2f2f;
+}
+/* End of Calendar Icon */
+
+
+/* Sidebar */
+#sidebar {
+  	width: 8em;
+    position: fixed;
+    right: 0;
+    top: 5em;
+}
+
+/*Side menu*/
+.sidemenu{
+	background-color: #080808;
+}
+
+#fixed-button {
+    position: fixed;
+    bottom: 8%;
+    right: 20%;
+    z-index: 100; 
+}
+
+.user-img{
+	max-width: 3em;
+	max-height: 3em;
+	width: 3em;
+	height: 3em;
+	margin-right: .5em;
+}
+
+.profile-detail{
+	margin-left: 5em;
+	margin-right: 3em;
+}
+
+.user-profile-name{
+	color: #efefef;
+}
+
+.icon-in-profile{
+	float: right;
+	margin-right: 1em;
+}
+
+
+.dash-brand{
+	font-style: italic ;
+	color: #757575;
+	
+}
+.dash-brand:hover{
+	text-decoration: none;
+	color: #e0e0e0;
+	font-style: italic ;
+}
+
+
+.memebership:hover{
+	background-color: #e0e0e0;
+}
+
+#membershipDetail{
+	/*margin-left: 2em;*/
+
+}
+#membershipDetail .btn{
+	/*color: #efefef;*/
+	width: 100%;
+}
+#passes .btn{
+	/*color: #efefef;*/
+	width: 100%;
+}
+div#membershipDetail{
+	background-color: #e0e0e0;
+	color: #757575;
+}
+.membership-highlight{
+	color: #4CAF50;
+
+}
+.members{
+	padding: 1em;
+	display: block;
+}
+
+.passes-highlight{
+	padding: 1em;
+	display: block;
+	color: #4CAF50;
 }
