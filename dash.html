@@ -28,504 +28,10 @@
 
       <title>Welcome to Arena Sports DASH - Schedules, standings, team payment and more!</title>
   
-  <script type="text/javascript">
-    $j = jQuery.noConflict();
-  </script>
-
-  <script type="text/javascript">
-    $j(function() {
-      init_mysam();
-    });
-  </script>
-
-      <!-- Google Analytics -->
-    <script type="text/javascript">
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-651856-6', 'auto');
-
-            ga('set', 'dimension1', 'arenasports' );
-      
-      ga('send', 'pageview');
-
-
-      
-      // if adding cross domains: https://support.google.com/analytics/answer/1034342?hl=en#GTM
-            ga('create', 'UA-651856-14', 'auto', {'name': 'client'});
-            ga('client.send', 'pageview');
-      
-    </script>
-    <!-- End Google Analytics -->
   
-<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
-.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
-.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
 <body data-gr-c-s-loaded="true" class="reset-this"><div id="ajaxLoading"></div>
 
-
 <script type="text/javascript">
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId: '328419437305840',
-      version: 'v2.3',
-      cookie: true,
-      xfbml: true
-    });
-  };
-
-  (function(d, s, id){
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {return;}
-    js = d.createElement(s); js.id = id;
-    js.src = '//connect.facebook.net/en_US/sdk.js';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
-<div id="baseWindow">
-  <!-- Adding a container div so that we can easily hide all nav items with javascript -->
-
-
-
-  <!-- <div class="side-social">Facebook</div>  TODO.. --> 
-
-
-  <div id="mainWindow" class="container-fluid"> 
-
-    
-    
-            
-    <div class="container" id="cartDIV"><!-- shopping cart javascript -->
-<script type="text/javascript">
-
-    /**
-       * Adds a product to the shopping cart
-       * @param prodID
-       * @param quantity
-       * @param options
-       * @return
-       */
-      function SITCart_addProduct(prodID, quantity, options) {
-        var submissionData = {
-          sitcart_action: 'add',
-          sitcart_prod: prodID,
-          sitcart_quantity: quantity
-        };
-
-        if (options && options.customerID) {
-          submissionData.sitcart_customer = options.customerID;
-        }
-        if (options && options.customerIDCart) {
-          submissionData.sitcart_customercart = options.customerIDCart;
-        }
-        if (options && options.teamID) {
-          submissionData.sitcart_team = options.teamID;
-        }
-        if (options && options.priceOverride) {
-          submissionData.sitcart_price_override = options.priceOverride;
-        }
-
-        $j.post("?action=inc/cartInit", submissionData, function(data, status){
-          if(!$j('#cartDIV').is(':visible')) {
-            $j('#cartDIV').show();
-          }
-          $j('#cartDIV').replaceWith(data);
-        });
-      }
-
-
-      /**
-       * Adds a pass product to the cart
-       * @param passType
-       * @param quantity
-       * @param customerID
-       */
-      function SITCart_addPass(passType, quantity, customerID) {
-        var data = {
-          sitcart_action: 'add',
-          sitcart_passtype: passType,
-          sitcart_quantity: quantity,
-          sitcart_customer: customerID
-        };
-        $j.post("?action=inc/cartInit", data,  function(data) {
-          $j('#cartDIV').replaceWith(data);
-        });
-      }
-
-      /**
-       * Applies a pass to a cart item
-       *
-       * @param passTypeID
-       * @param passID
-       * @param cartItemID
-       * @param customerID
-       */
-      function SITCart_applyPass(passTypeID, passID, customerID, cartItemID) {
-        var data = {
-          sitcart_action: 'add',
-          sitcart_apply_customerpass: passID,
-          sitcart_customer: customerID
-        };
-
-        if (typeof cartItemID != 'undefined') {
-          data.sitcart_item = cartItemID;
-          data.sitcart_applypass = passTypeID;
-        } else {
-          data.sitcart_applypass_all = passTypeID;
-        }
-
-        $j.post("?action=inc/cartInit", data,  function(data) {
-          $j('#cartDIV').replaceWith(data);
-        });
-      }
-
-      function SITCart_addCustomer_selectUtil(selector){
-        var customerList = Array();
-        $j(selector).each(function(){
-          customerList.push($j(this).val());
-        });
-        SITCart_addMassInvoiceCustomer(customerList);
-      }
-      /**
-       * Mass invoice tool that adds multiple customers to a cart to be invoiced.
-       * @param customerID
-       * @returns
-       */
-      function SITCart_addMassInvoiceCustomer(customerID){
-        $j.post("?action=inc/cartInit", { sitcart_action: 'massinvoice', sitcart_customerList: customerID.toString()}, function(data, status){
-          $j('#cartDIV').replaceWith(data);
-        });
-      }
-
-      /**
-      * Mass invoice tool that adds multiple customers to a cart to be invoiced.
-      * @param customerID
-      * @returns
-      */
-      function SIT_Cart_addInvoicePayment($invoiceID, $invoiceDue, $customerID){
-        $j.post("?action=inc/cartInit", { sitcart_action: 'sitcart_invoice', amount: $invoiceDue, invoiceID: $invoiceID, sitcart_customercart: $customerID}, function(data, status){
-          $j('#cartDIV').replaceWith(data);
-        });
-      }
-      /**
-       * Adds a product by UPC to the shopping cart
-       * @param upc
-       * @return
-       */
-      function SITCart_addProductByUPC(upc){
-        $j.post("?action=inc/cartInit", { sitcart_action: "add", sitcart_upc: upc}, function(data, status){
-          $j('#cartDIV').replaceWith(data);
-        });
-      }
-    function SITCart_updatePartialPayment(){
-      var cartTotal = 0.00;
-      carTotal = parseFloat(cartTotal);
-      $j('input[id="partialPaymentInput"]').val(cartTotal);
-    }
-    /**
-     * Adds customer's credits to the cart
-     * @return
-     */
-    function SITCart_applyCredit(options, callback){
-      $j.post("?action=inc/cartInit", { sitcart_action: "apply_account_credit", sitcart_options: options}, function(data, status){
-        $j('#cartDIV').replaceWith(data);
-        if (typeof callback == 'function') {
-          callback();
-        }
-      });
-    }
-
-    function SITCart_removeItem(itemID) {
-      $j.post("?action=inc/cartInit", {sitcart_action: 'modify', sitcart_itemsremove: itemID, cashRegister: true, wrapper: false }, function(data, status){
-        $j('#cartDIV').replaceWith(data);
-      });
-    }
-
-    function SITCart_Close() {
-      $j.post('index.php?Action=Cart/destroy&company=arenasports', function() {
-        //don't remove the cartDIV so other ajax calls can update the info in it
-        $j('#cartDIV').replaceWith("<div id='cartDIV'></div>");
-              });
-    }
-
-    function SITCart_ReloadGiftCard(giftCardID, amount) {
-      $j.post('?action=inc/cartInit', {sitcart_action: 'reload_gift_card', giftCardID: giftCardID, amount: amount}, function(data, status) {
-        $j('#cartDIV').replaceWith(data);
-        if(!$j(this).parents('.cashRegister-cartWrapper').length) {
-          $j('html, body').animate({
-            scrollTop: 0
-          }, 600);
-        }
-      });
-    }
-
-    function SITCart_TransferGiftCard(to, from) {
-      $j.post('?action=inc/cartInit', {sitcart_action: 'transfer_gift_card', to: to, from: from}, function(data, status) {
-        $j('#cartDIV').replaceWith(data);
-        $j('html, body').animate({
-          scrollTop: 0
-        }, 600);
-      });
-    }
-
-    //discount ajax route only used for the checkout
-    function SITCart_ApplyDiscount(discountCode) {
-      $j.post('?action=inc/cartInit', {sitcart_action: 'modify', sitcart_discountCode: discountCode}, function(data, status) {
-        $j('#cartDIV').replaceWith(data);
-      });
-    }
-
-      /* page load stuff - jquery bindings */
-      jQuery(document).ready(function($j){
-          /* Send request to process mass invoice */
-          $j('#massInvoice').click(function(){
-            var invoice_customerList = $j('input[name="invoice_customerList[]"]:checked').map(function() {
-              return this.value;
-            }).get().join(',');
-
-            SITGoLocation("index.php?Action=MassInvoice&nocart=1&company=arenasports&invoice_customerList="+invoice_customerList);
-          });
-
-          /* removes customers from the mass invoice process */
-          $j('#massInvoiceClear').click(function(){
-              $j.post("?action=inc/cartInit", {  sitcart_action: 'massinvoice_clear' }, function(data, status){
-                $j('#cartDIV').replaceWith(data);
-              });
-          });
-        /**
-         * click functionality of the quick cash button
-         */
-        $j('#quick_cash_submit').click(function() {
-          $j.post('?Action=Checkout/quickCashCheckout', function(response) {
-            $j('#sessionMessageOutput').html(response);
-            $j('#SIT_Cart').remove(); //successful quick cash, so need to remove the cart
-          }).error(function(response) {
-            SIT_printErrors(response.responseJSON);
-          });
-        });
-      });
-    //-->
-    </script>
-    <script type="text/javascript">
-            jQuery('.cashRegister-cartWrapper .table tr:not(.dropdownCart), .sitcart_us_area').show();
-      $j('.hideCart').text('Hide');
-          </script>
-<div id="SIT_Cart">
-  </div></div>      
-  <div class="modal fade" id="customerEditModule">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-              <h4 class="modal-title title-edit">Edit Information for <span></span></h4>
-              <h4 class="modal-title title-addChild">Add child for <span></span></h4>
-            </div>
-            <div class="modal-body">
-              
-              <div class="modal-messageOutput"></div>
- 
-              <form class="primary-form">
-                
-                <input type="hidden" name="customerID">
-                <input type="hidden" name="addingNewChild">
-
-                <div class="row">
-                  
-                  <!-- Nav tabs -->
-                  <ul class="nav nav-tabs">
-                    <li class="active"><a href="https://apps.dashplatform.com/beta/dash/index.php?action=Home/index&amp;company=arenasports#profile" data-toggle="tab">Profile</a></li>
-                    <li><a href="https://apps.dashplatform.com/beta/dash/index.php?action=Home/index&amp;company=arenasports#contactSettings" data-toggle="tab">Contact Settings</a></li>
-                                      </ul>
-
-                  <br>
-
-                  <!-- Tab panes -->
-                  <div class="tab-content">
-                    <div class="tab-pane active" id="profile">
-                      
-                      <div class="form-group col-sm-12 useMyContactInfoInput">
-                        <div class="checkbox">
-                          <label for="useMyContactInfo">
-                            <input type="hidden" name="useMyContactInfo" value="0">
-                            <input type="checkbox" name="useMyContactInfo" id="useMyContactInfo" value="1">
-                            Same contact information as parent
-                          </label>
-                        </div>
-                      </div>
-
-                      <div class="form-group col-sm-6">
-                        <label>First Name</label>
-                        <input type="text" class="form-control" name="firstName">
-                      </div>
-                      <div class="form-group col-sm-6">
-                        <label>Last Name</label>
-                        <input type="text" class="form-control" name="lastName">
-                      </div> 
-
-                      <div class="form-group col-sm-3">
-                        <label>Gender</label>
-                        <select class="form-control" name="sex">
-                          <option value="m">Male</option>
-                          <option value="f">Female</option>
-                        </select>
-                      </div>        
-                      <div class="form-group col-sm-3">
-                        <label>Date of Birth</label>
-                        <input type="text" class="form-control" name="dob" placeholder="mm/dd/yyyy">
-                      </div>
-                      <div class="form-group col-sm-6 contactInfo">
-                        <label>Email</label>
-                        <input type="text" class="form-control" name="email">
-                      </div>
-
-                      <div class="form-group col-sm-6 contactInfo">
-                        <label>Address Line 1</label>
-                        <input type="text" class="form-control" name="address">
-                      </div>
-                      <div class="form-group col-sm-6 contactInfo">
-                        <label>Address Line 2</label>
-                        <input type="text" class="form-control" name="address2">
-                      </div>
-
-                      <div class="form-group col-sm-6 contactInfo">
-                        <label>City</label>
-                        <input type="text" class="form-control" name="city">
-                      </div>
-                      <div class="form-group col-sm-2 contactInfo">
-                        <label>State</label>
-                        <input type="text" class="form-control" name="state">
-                      </div>              
-                      <div class="form-group col-sm-4 contactInfo">
-                        <label>Zip</label>
-                        <input type="text" class="form-control" name="zip">
-                      </div>    
-
-                      <div class="form-group col-sm-6 contactInfo">
-                        <label>Day Phone</label>
-                        <input type="text" class="form-control" name="phoneDay">
-                      </div>
-                      <div class="form-group col-sm-6 contactInfo">
-                        <label>Night Phone</label>
-                        <input type="text" class="form-control" name="phoneNight">
-                      </div>
-
-                      <div class="form-group col-sm-6 contactInfo">
-                        <label>Mobile Phone</label>
-                        <input type="text" class="form-control" name="phoneMobile">
-                      </div>
-                      <div class="form-group col-sm-6 contactInfo">
-                        <label>Emergency Phone</label>
-                        <input type="text" class="form-control" name="phoneEmergency">
-                      </div>
-
-                      <div class="form-group col-sm-6 contactInfo">
-                        <label>Mobile Carrier</label>
-                        <select id="mobileCarrier" class="form-control" style="" name="mobileCarrier"><option value="0">--Mobile Carrier--</option>
-<option value="Aliant">Aliant</option>
-<option value="Ameritech">Ameritech</option>
-<option value="ATT">AT&amp;T Wireless</option>
-<option value="BellCA">Bell Canada</option>
-<option value="Bellsouth">Bellsouth</option>
-<option value="Boost">Boost</option>
-<option value="CellularOne">CellularOne</option>
-<option value="Cricket">Cricket Wireless</option>
-<option value="EdgeWireless">Edge Wireless</option>
-<option value="Fido">Fido</option>
-<option value="GCI">General Communications</option>
-<option value="Koodo">Koodo</option>
-<option value="Metro PCS">Metro PCS</option>
-<option value="MatanuskaTA">MTA (Matanuska)</option>
-<option value="MTSMobility">MTS Mobility</option>
-<option value="SprintNextel">Nextel</option>
-<option value="nTelos">nTelos</option>
-<option value="Orange">Orange / O2</option>
-<option value="PresidentsChoice">President's Choice</option>
-<option value="Qwest">Qwest</option>
-<option value="RogersWireless">Rogers Wireless</option>
-<option value="SasktelMobility">Sasktel Mobility</option>
-<option value="Sprint">Sprint</option>
-<option value="T-Mobile">T-Mobile</option>
-<option value="Telus">Telus Mobility</option>
-<option value="USCellular">US Cellular</option>
-<option value="Verizon">Verizon</option>
-<option value="VirginMobile">Virgin Mobile</option>
-<option value="VirginMobileCA">Virgin Mobile CA</option>
-</select>
-                      </div>
-                      <div class="form-group col-sm-6" id="resetPasswordControl">
-                        <label>&nbsp;</label>
-                        <a class="form-control btn btn-warning" href="https://apps.dashplatform.com/beta/dash/index.php?action=forgotpw">Reset Password</a>
-                      </div>
-                      
-                    </div><!-- /.tab-pane -->
-                    <div class="tab-pane" id="contactSettings">
-                      
-                      <div class="form-group col-sm-12">
-                        
-                        <b>Contact Settings</b>
-                    
-                        <div class="radio">
-                          <label for="emailRemindersOKTrue">
-                            <input type="radio" id="emailRemindersOKTrue" name="emailRemindersOK" value="1">
-                            Send me email reminders about scheduled events
-                          </label>
-                        </div>
-
-                        <div class="radio">
-                          <label for="emailRemindersOKFalse">
-                            <input type="radio" id="emailRemindersOKFalse" name="emailRemindersOK" value="0">
-                            Please don't send any email to me<br>
-                            <em>(Includes: reminders, receipts, special notices and promotional emails)</em>
-                          </label>
-                        </div>
-
-
-                        <div class="checkbox">
-                          <label for="sendSMSOK">
-                            <input type="hidden" value="0" name="sendSMSOK">
-                            <input type="checkbox" value="1" id="sendSMSOK" name="sendSMSOK">
-                            Send me SMS (mobile phone text message) event reminders and essential notices<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <em>your mobile carrier may charge you for text messages</em> -
-                          </label>
-                        </div>
-
-                        <div class="checkbox">
-                          <label for="showContactInfoOK">
-                            <input type="hidden" value="0" name="showContactInfoOK">
-                            <input type="checkbox" value="1" id="showContactInfoOK" name="showContactInfoOK">
-                            Show my phone and email information to others on my roster
-                          </label>
-                        </div>
-
-                        <div class="checkbox">
-                          <label for="showAddressOK">
-                            <input type="hidden" value="0" name="showAddressOK">
-                            <input type="checkbox" value="1" id="showAddressOK" name="showAddressOK">
-                            Show my address information to others on my roster
-                          </label>
-                        </div>
-
-                      </div>
-                      
-                    </div><!-- /.tab-pane -->
-                                      </div>
-                  
-                </div><!-- /.row --> 
-           
-              </form>
-
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary buttonSaveChanges">Save changes</button>
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
-
-      <script type="text/javascript">
         
         /************************************************
          * JS Begin CustomerEditModule Class Definition *
@@ -703,7 +209,20 @@
          **********************************************/
         
       </script>
-    
+    <script type="text/javascript">
+
+  $j(document).ready(function(event){
+    // Wire up 'Edit Profile' buttons for child profiles
+    $j('#addChildButton').click(function(event){
+      $j(document).trigger('CEM_requestActivation', {'action': 'addChild', 'customerID': 24625});
+    });
+
+    // Wire up event listener for when profile edit module completes a successful save
+    $j(document).on('CEM_updateComplete', function(event, data){
+      location.reload(true); // Force reload without using cache
+    });
+  });
+</script>
 
 
                                 
@@ -748,6 +267,20 @@
   });
 </script>
 
+<div id="baseWindow">
+  <!-- Adding a container div so that we can easily hide all nav items with javascript -->
+
+
+
+  <!-- <div class="side-social">Facebook</div>  TODO.. --> 
+
+
+<div id="mainWindow" class="container-fluid"> 
+
+    
+    
+
+
 <!-- This is for Top Menu -->
 <div class="top-menu">
   <!-- Simple header with scrollable tabs. -->
@@ -759,125 +292,23 @@
     </div>
     <!-- Tabs -->
     <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-      <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Events</a>
-      <a href="#scroll-tab-2" class="mdl-layout__tab">Memeberships</a>
-      <a href="#scroll-tab-3" class="mdl-layout__tab">Passes</a>
-      <a href="#scroll-tab-4" class="mdl-layout__tab">Cart</a>
+      <a href="#events" class="mdl-layout__tab is-active">Events</a>
+      <a href="#memberships" class="mdl-layout__tab">Memeberships</a>
+      <a href="#passes" class="mdl-layout__tab">Passes</a>
+      <a href="#cart" class="mdl-layout__tab">Cart</a>
     </div>
   </header>
   <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Title</span>
+    <span class="mdl-layout-title">Dash</span>
   </div>
   <main class="mdl-layout__content">
-    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-      <div class="page-content"><!-- Your content goes here --></div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="scroll-tab-2">
-      <div class="page-content"><!-- Your content goes here --></div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="scroll-tab-3">
-      <div class="page-content"><!-- Your content goes here --></div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="scroll-tab-4">
-      <div class="page-content"><!-- Your content goes here --></div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="scroll-tab-5">
-      <div class="page-content"><!-- Your content goes here --></div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="scroll-tab-6">
-      <div class="page-content"><!-- Your content goes here --></div>
-    </section>
-  </main>
-</div>
-
-</div>
+    <section class="mdl-layout__tab-panel is-active" id="events">
+      <div class="page-content">
 <div class="row">
 
 
-<!-- No header, and the drawer stays open on larger screens (fixed drawer). -->
-
-<div id="new-pass" class="modal fade">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h4 class="modal-title">Purchase a Pass</h4>
-      </div>
-      <div class="modal-body">
-                  <table class="table table-striped">
-            <tbody><tr>
-              <th></th>
-              <th>Name</th>
-              <th>Units</th>
-              <th>Discount</th>
-              <th>Discount Type</th>
-              <th>Valid For</th>
-            </tr>
-                          <tr>
-                <td><a class="purchasePass" href="https://apps.dashplatform.com/beta/dash/index.php?Action=Home&amp;company=arenasports&amp;CustomerID=24625&amp;sitcart_action=add&amp;sitcart_passtype=9&amp;sitcart_customer=24625"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-                </td><td>Skills Institute Adult Clinic Pass</td>
-                <td>
-                                    <select class="quantitySelect">
-                                          <option value="8">8</option>
-                                      </select>
-                </td>
-                <td>1.00</td>
-                <td>$</td>
-                <td> </td>
-              </tr>
-                      </tbody></table>
-              </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<script >
-  function togglePasses(){
-    var pass = document.getElementById("passesDetail");
-    var passes = document.getElementById("passes");
-    if(pass.style.display === 'none'){
-      pass.style.display = 'block';
-      passes.style.background = ' #e0e0e0';
-    }else{
-      pass.style.display = 'none';
-      passes.style.background = 'none';
-      passes.style.textDecoration = 'none';
-    }
-  }
-  function toggleMembership(){
-    // console.log("Toggle Membership");
-    var membership = document.getElementById("membershipDetail");
-    var membershipBtn =document.getElementById("membershipBtn");
-    if(membership.style.display === 'none'){
-      membership.style.display = 'block';
-      membershipBtn.style.background = ' #e0e0e0';
-      // document.getElementById("membership").innerHTML = "expand_less";
-    }else{
-      membership.style.display = 'none';
-      membershipBtn.style.background = 'none';
-      membershipBtn.style.textDecoration = 'none';
-      // document.getElementById("membership").innerHTML = "expand_more";
-    }
-  }
-  function toggleProfileDetail(){
-    // document.getElementById("profileDetail").innerHTML = "TEST from js";
-    var profileDetail = document.getElementById("profileDetail");
-    if(profileDetail.style.display === 'none'){
-      profileDetail.style.display = 'block';
-      document.getElementById("profileMore").innerHTML = "expand_less";
-    }else{
-      profileDetail.style.display = 'none';
-      document.getElementById("profileMore").innerHTML = "expand_more";
-    }
-  }
-</script>
-<!-- <div class="col-sm-1"></div> -->
-  <div class="col-sm-10 demo-main clearfix" id="homeIndexGroupList">
-
-    <div class="row page-title my-font" >
-    <!-- <h1>Events</h1> -->
-    <h1>&nbsp;</h1>
-  </div>
-      
+  <div class="col-sm-10 demo-main clearfix" id="events">
+         
     <!-- // /////////////////////////////////////////////////////////////////////////////////////////////     -->
 
     
@@ -914,6 +345,13 @@
     href="https://apps.dashplatform.com/beta/dash/index.php?action=team&amp;customerID=24625&amp;teamid=113644">
       Team
     </button>
+    <!-- Icon button -->
+      <button class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons" id="sendMsg">message</i>
+        <div class="mdl-tooltip" data-mdl-for="sendMsg">
+          Send Message
+        </div>
+      </button>
         
         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect pull-right"
          href="https://apps.dashplatform.com/beta/dash/index.php?action=signupSwitch">
@@ -930,13 +368,6 @@
       <img class="img-circle my-center-img" src="./dash_files/24625.jpg">
       <figcaption class="my-font">
         Anthony
-      <!-- Icon button -->
-      <button class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons" id="sendMsg">message</i>
-        <div class="mdl-tooltip" data-mdl-for="sendMsg">
-          Send Message
-        </div>
-      </button>
       </figcaption>
     </figure>
     </div>
@@ -974,6 +405,15 @@
     href="https://apps.dashplatform.com/beta/dash/index.php?action=team&amp;customerID=66223&amp;teamid=95101">
       Camp
     </button>
+
+    <!-- Icon button -->
+    <button class="mdl-button mdl-js-button mdl-button--icon">
+      <i class="material-icons" id="sendMsg1">message</i>
+      <div class="mdl-tooltip" data-mdl-for="sendMsg1">
+        Send Message
+      </div>
+    </button>
+
         
         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect pull-right"
          href="https://apps.dashplatform.com/beta/dash/index.php?action=signupSwitch">
@@ -994,13 +434,6 @@
       </div>
       <figcaption class="my-font">
         Elliot
-      <!-- Icon button -->
-      <button class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons" id="sendMsg1">message</i>
-        <div class="mdl-tooltip" data-mdl-for="sendMsg1">
-          Send Message
-        </div>
-      </button>
       </figcaption>
     </figure>
     </div>
@@ -1045,7 +478,13 @@
     href="https://apps.dashplatform.com/beta/dash/index.php?action=team&amp;customerID=117737&amp;teamid=111606">
       Class
     </button>
-
+    <!-- Icon button -->
+      <button class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons" id="sendMsg2">message</i>
+        <div class="mdl-tooltip" data-mdl-for="sendMsg2">
+          Send Message
+        </div>
+      </button>
 
         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect pull-right"
          href="https://apps.dashplatform.com/beta/dash/index.php?action=signupSwitch">
@@ -1065,50 +504,206 @@
         Wyatt
       </div>
       <figcaption class="my-font">
-        Wyatt
-      <!-- Icon button -->
-      <button class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons" id="sendMsg2">message</i>
-        <div class="mdl-tooltip" data-mdl-for="sendMsg2">
-          Send Message
-        </div>
-      </button>
+        Wyatt      
       </figcaption>
     </figure>
     </div>
   </div>
   </div>
-  <!-- // /////////////////////////////////////////////////////////////////////////////////////////////     -->
-  
-  <!-- FIxed button for add new event -->
-<!--   <div id="fixed-button" >
-  <button class=" mdl-button mdl-js-button mdl-button--fab mdl-button--colored"
-   onclick="addNewEventBtn()">
-    <i class="material-icons">add</i>
-  </button> 
-  </div>
 
-  <script>
-  function addNewEventBtn(){
-    // document.getElementById("fixed-button").innerHTML = "TEST from js";
-    $j('#customerEditModule').modal('show');
-
-  }
     
-  </script>  -->
-  
-  
-<!-- // /////////////////////////////////////////////////////////////////////////////////////////////     -->
-  
-
-    <a id="addChildButton" href="javascript:void(0);" class="btn btn-default">Add Family Member</a>
     
   </div>
+</div><!-- End of Row (EVENTS) -->
 
+      </div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="memberships">
+      <div class="page-content">
+<div class="row" style="display: block; margin:auto;">
+
+<div class="col-sm-12 "  >
+
+  <div class="col-sm-4 " style="margin-top: 8em;">
+
+  <div class="member-container">
+    <div class="member-profile">
+    <figure>
+      <img class="img-circle my-center-img" src="./dash_files/24625.jpg">
+      <h4 class="my-font center-text">
+        Anthony Tippett
+      </h4>
+    </figure>
+
+    <ul class="" >
+      <li class="row">        
+        <h5 class="my-font " >Contact Information</h5>
+        <!-- Icon button -->
+        <button class="mdl-button mdl-js-button mdl-button--icon" style="display: inline;">
+          <i class="material-icons">mode_edit</i>
+        </button>
+      </li>
+      <li class="row contact-info-profile">
+        <div >
+        <i class="material-icons col-sm-2 ">home</i>&nbsp;&nbsp;
+        <span class="col-sm-9 my-font">
+          15710 249th Ave Se
+          <br>
+          Issaquah, WA 98027
+        </span>
+        </div>
+      </li>
+      <li class="row contact-info-profile">
+        <div >
+        <i class="material-icons col-sm-2">phone</i>&nbsp;&nbsp;
+        <span class="col-sm-9 my-font">&nbsp; (425) 443-3152</span>
+      </div>
+      </li>
+      <li class="row contact-info-profile">
+        <div >
+        <i class="material-icons col-sm-2">email</i>&nbsp;&nbsp;
+        <span class="col-sm-9 my-font">atippett@gmail.com</span>
+      </div>
+      </li>
+    </ul>          
+    </div>
+
+  </div>
+
+
+
+      
+      
+  </div>
+
+<div class="col-sm-6">
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text membership-title my-font">
+        Family Membership &nbsp;
+        <span class="label label-success">Expires: Mar 18, 2020</span>
+      </h2>
+    </div>
+    <div class="mdl-card__supporting-text fam-membership my-font">
+    <p>
+      This section is to display benefits of owned Membership, eg. Family Membership. Explain what they can do with it, what is limited, and etc.
+    </p>
+      
+    
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect ">
+        See Member Benefits
+      </a>
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect pull-right my-font "
+      href="https://apps.dashplatform.com/beta/dash/index.php?action=Home/index&amp;company=arenasports#membershipModal" role="button" data-toggle="modal">
+        Renew Membership
+      </a>
+    </div>
+  </div>  
+</div>
+
+  
+</div>
+
+</div>      <!-- End of row of family membership and profile -->
+
+<div><br><br><br></div>
+<div class="row" style="background-color: #fff;">
+  
+  <div class="col-sm-10 demo-main clearfix" id="events">
+         
+    <!-- // /////////////////////////////////////////////////////////////////////////////////////////////     -->
+    <!--
+      Anthony Tippett, Maria Ewing, Elliot Tippett, Wyatt Tippett, Eleanor Haugen, aw Tippett, Aden Tippett, Boo Tippett, Luci Haugen, todd Tippett, Luci Haugen, Ne Tippett
+     -->
+    <h2 class="my-font" style="margin: 2em 0 2em 4em;">
+    My Members 
+    <!-- Accent-colored raised button -->
+    <button id="addChildButton"  class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+      Add New Member
+    </button>
+
+    </h2>
+
+    
+    <div class="col-sm-3 members">
+        <div class="member-profile-photo" style="height:100px; width:100px; margin: auto;">
+          Maria Ewing
+        </div>
+        <div class="my-font" style="text-align: center;">Maria Ewing</div>
+    </div>
+
+    <div class="col-sm-3 members">
+        <div class="member-profile-photo" style="height:100px; width:100px; margin: auto;">
+          Elliot Tippett
+        </div>
+        <div class="my-font" style="text-align: center;">Elliot Tippett</div>
+    </div>
+
+    <div class="col-sm-3 members">
+        <div class="member-profile-photo" style="height:100px; width:100px; margin: auto;">
+          Wyatt Tippett
+        </div>
+        <div class="my-font" style="text-align: center;">Wyatt Tippett</div>
+    </div>
+
+    <div class="col-sm-3 members">
+        <div class="member-profile-photo" style="height:100px; width:100px; margin: auto;">
+          Eleanor Haugen
+        </div>
+        <div class="my-font" style="text-align: center;">Eleanor Haugen</div>
+    </div>
+
+    <div class="col-sm-3 members">
+        <div class="member-profile-photo" style="height:100px; width:100px; margin: auto;">
+          Aden Tippett
+        </div>
+        <div class="my-font" style="text-align: center;">Aden Tippett</div>
+    </div>
+
+    <div class="col-sm-3 members">
+        <div class="member-profile-photo" style="height:100px; width:100px; margin: auto;">
+          Luci Haugen
+        </div>
+        <div class="my-font" style="text-align: center;">Luci Haugen</div>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+      </div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="passes">
+      <div class="page-content">
+        <!-- Contents for #Passes -->
+        <h2>Contents for #Passes</h2>
+      </div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="cart">
+      <div class="page-content">
+        <!-- Contents for Cart -->
+        <h2>Contents for Cart</h2>
+      </div>
+    </section>
+  </main>
+</div>
 
 </div>
-    </div>
-  </div>
+
+
+
+</div> <!-- END of #mainWindow-->
+
+
+
+
+
+
   <div id="footerWindow" class="text-muted">
           Call (425) 885-4881 or <a href="https://apps.dashplatform.com/beta/dash/index.php?action=support">email us</a>
         © 2017 <a href="http://www.dashplatform.com/">DASH Platform</a>.
@@ -1116,10 +711,6 @@
 <div id="windowNotice">
   <div class="alert alert-info" style="margin-left: auto; margin-right: auto; width:60%"></div>
 </div>
-
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fceb57b065","applicationID":"10420482,10907248","transactionName":"YQRTZEVRWRJRVEVcW1hOckVERFgMH39eWFEZCF9UUkg=","queueTime":0,"applicationTime":624,"atts":"TUNEEg1LSk0SVhMPT0sc","errorBeacon":"bam.nr-data.net","agent":""}</script>
-
-
 
 
 <!-- Material Avatar -->
@@ -1131,10 +722,16 @@
   //or use jQuery
   // var options =  {randomColor: {hue: 'orange'}};
   $('.default-profile-photo').materialAvatar({shape: 'circle'});
+  $('.member-profile-photo').materialAvatar({shape: 'square'});
 </script>
+
 
 <!-- END OF MATERIAL Avatar-->
 
 
 
-<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./dash_files/ao6eUeuGXQq.html" style="border: none;"></iframe></div></div></div></body></html>
+
+
+</div></body></head></html>
+
+
