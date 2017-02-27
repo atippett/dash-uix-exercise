@@ -1,39 +1,121 @@
-@media only screen and (max-width: 500px) {
-	.demo-card-wide{
-		width: 90% !important;
-		margin-bottom: 3rem;
-	}
-	.mdl-layout__drawer{
-		width: 80%;
-		/*background-color: #373a3c;*/
-		background-color: #ff0;
-		color:	#efefef;
-	}
+
+
+@media only screen and (max-width: 750px) {
+	
+}
+@media only screen and (min-width: 750px) {
 }
 
+body{
+		background-color: #efefef;
+}
+ul {
+  list-style-type: none;
+}
+
+.row {
+     margin-right: 0; 
+     margin-left: 0; 
+     display: flex;
+  	 flex-wrap: wrap;
+
+}
+.container-fluid {
+     padding-right: 0; 
+     padding-left: 0; 
+}	
+
+.demo-main{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.my-font{
+	font-family: 'Montserrat', sans-serif!important;
+}
+.member-container{
+	height: 10em;
+	display: flex;
+	align-items: center;
+	justify-content: center 
+}
+.member-profile{
+	margin: 0;
+}
+.contact-info-profile{
+	margin-left: -3em;
+}
+.mdl-card__title-text.membership-title{
+	color: #757575;
+}
+
+.fam-membership{
+	font-size: 100%;
+}
+
+.label{
+	padding: .3em .6em .3em;
+}
+
+/* Demo Card For Memebers of Family Membership */
+.face-card {
+    /* Add shadows to create the "card" effect */
+    /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+    /*transition: 0.3s;*/
+    /*text-align: center;*/
+    /*center*/
+    /*height: 10em;*/
+	display: flex;
+	align-items: center;
+	justify-content: center ;
+	/*background-color: #efefef;*/
+}
+.face-card-container {
+    padding: 2px 16px;
+}
+.face-card-caption{
+	text-align: bottom;
+}
+
+.mdl-layout__tab-bar {
+    margin: auto;
+    width: calc(100% - 110px);
+    padding: 0 0 0 50px;
+}
 
 .page-title{
-	margin-left: 35%;
-	margin-top: 2em;
-	margin-bottom: 3em;
+	padding-left: 30em;
+	/*margin-top: 2em;*/
+	padding-bottom: .2em;
+	margin-bottom: 2em;
+    /*border-bottom: thick solid #fff;*/
 }
 
 /*# sourceMappingURL=styles.css.map */
 .demo-card-wide{
-	width: 55% !important;
+	width: 90%;
 	margin-bottom: 3rem;
-	margin-top: 2rem;
-	margin-left: 35%;
+	margin-top: 5rem;
+	margin-left: 2em;
 }
 
 
-.mdl-layout__drawer{
-	width: 20%;
+.center-text{
+	text-align: center;
+}
+
+
+
+/*.mdl-layout__drawer{
+	width: 25em;
 	background-color: #373a3c;
 	color:	#efefef;
 }
-
-
+*/
+.mdl-card__title-text{
+	font-size: 2.5vmin;
+	color: #efefef;
+}
 
 
 #homeIndexGroupList h2{
@@ -91,9 +173,7 @@ time.icon
   position: relative;
   width: 7em;
   height: 7em;
-  background-color: #fff;
-  border-radius: 0.6em;
-  box-shadow: 0 1px 0 #bdbdbd, 0 0 0 1px #bdbdbd;
+  background-color: #efefef;
   overflow: hidden;
 }
 time.icon *
@@ -110,41 +190,42 @@ time.icon strong
   position: absolute;
   top: 0;
   padding: 0.4em 0;
-  color: #fff;
-  background-color: #95a5a6;
-  /*border-bottom: 1px dashed #f37302;*/
-  box-shadow: 0 2px 0 #95a5a6;
+  font-size: 1.2em;
+  font-family: "Lato", sans-serif!important;
+  color: #efefef;
+  background-color: #757575;
 }
 
 time.icon em
 {
+  font-family: "Lato", sans-serif!important;
   position: absolute;
   bottom: 0.1em;
-  color: #95a5a6;
+  color: #757575;
 }
 
 time.icon span
 {
-  font-size: 1.8em;
-  letter-spacing: -0.05em;
-  /*padding-top: 0.8em;*/
-  margin-top: 1.8em;
+  font-family: "Lato", sans-serif!important;
+  font-size: 1.5em;
+  /*letter-spacing: -0.01em;*/
+  margin-top: 2.1em;
   color: #2f2f2f;
 }
 /* End of Calendar Icon */
 
 
 /* Sidebar */
-#sidebar {
+#side-social {
   	width: 8em;
     position: fixed;
     right: 0;
-    top: 5em;
+    top: 8em;
 }
 
 /*Side menu*/
 .sidemenu{
-	background-color: #080808;
+	background-color: #f00;
 }
 
 #fixed-button {
