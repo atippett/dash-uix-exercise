@@ -697,8 +697,83 @@
     </section>
     <section class="mdl-layout__tab-panel" id="passes">
       <div class="page-content">
-        <!-- Contents for #Passes -->
-        <h2>Contents for #Passes</h2>
+        
+<div class="boxLight">
+
+  <h4>Passes</h4>
+    <div class="col-sm-3 member-new">
+        <button class="mdl-button mdl-js-button mdl-button--fab member-new-btn" id="new-pass" style="margin: auto;">
+          <i class="material-icons">add</i>
+        </button>
+
+    </div>
+  <br class="clearfix">
+
+  
+<div id="new-pass" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">Purchase a Pass</h4>
+      </div>
+      <div class="modal-body">
+                  <table class="table table-striped">
+            <tbody><tr>
+              <th></th>
+              <th>Name</th>
+              <th>Units</th>
+              <th>Discount</th>
+              <th>Discount Type</th>
+              <th>Valid For</th>
+            </tr>
+                          <tr>
+                <td><a class="purchasePass" href="https://apps.dashplatform.com/beta/dash/index.php?Action=Home&amp;company=arenasports&amp;CustomerID=24625&amp;sitcart_action=add&amp;sitcart_passtype=9&amp;sitcart_customer=24625"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                </td><td>Skills Institute Adult Clinic Pass</td>
+                <td>
+                                    <select class="quantitySelect">
+                                          <option value="8">8</option>
+                                      </select>
+                </td>
+                <td>1.00</td>
+                <td>$</td>
+                <td> </td>
+              </tr>
+                      </tbody></table>
+              </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script>
+  $j('#new-pass').modal('show');
+
+  $j('.purchasePass').click(function(e){
+    e.preventDefault();
+    // Get the quantity
+    var quantity = $j(this).closest('tr').find('.quantitySelect').val();
+    var href = $j(this).attr('href') + "&sitcart_quantity=" + quantity;
+    SITGoLocation(href);
+  });
+</script>
+<script type="text/javascript">
+  var dialog = document.querySelector('dialog');
+    var showDialogButton = document.querySelector('#show-dialog');
+    if (! dialog.showModal) {
+      // dialogPolyfill.registerDialog(dialog);
+    }
+    showDialogButton.addEventListener('click', function() {
+      dialog.showModal();
+    });
+    dialog.querySelector('.closewindow').addEventListener('click', function() {
+      dialog.close();
+    });
+    dialog.querySelector('.send').addEventListener('click', function() {
+      dialog.close();
+    });
+</script>
+</div>
+
       </div>
     </section>
     <section class="mdl-layout__tab-panel" id="cart">
@@ -739,7 +814,7 @@
       </form>
     </div>
     <div class="mdl-dialog__actions">
-      <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary add">Add</button>
+      <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary send">Add</button>
       <button class="mdl-button mdl-js-button mdl-js-ripple-effect closewindow">
         Close
       </button>
@@ -757,21 +832,12 @@
     dialog.querySelector('.closewindow').addEventListener('click', function() {
       dialog.close();
     });
-    dialog.querySelector('.add').addEventListener('click', function() {
+    dialog.querySelector('.send').addEventListener('click', function() {
       dialog.close();
     });
 </script>
 
 
-
-
-  <div id="footerWindow" class="text-muted">
-          Call (425) 885-4881 or <a href="https://apps.dashplatform.com/beta/dash/index.php?action=support">email us</a>
-        © 2017 <a href="http://www.dashplatform.com/">DASH Platform</a>.
-      </div>
-<div id="windowNotice">
-  <div class="alert alert-info" style="margin-left: auto; margin-right: auto; width:60%"></div>
-</div>
 
 
 <!-- Material Avatar -->
@@ -798,11 +864,16 @@
 </div>
 
 
-
-<div id="footerWindow" class="text-muted">
+<div class="row">
+<div class="container">
+<footer style="min-height: 100px; margin-top: 100px; text-align: center;;">
     Call (425) 885-4881 or <a href="https://apps.dashplatform.com/beta/dash/index.php?action=support">email us</a>
-  © 2017 <a href="http://www.dashplatform.com/">DASH Platform</a>.
+    © 2017 <a href="http://www.dashplatform.com/">DASH Platform</a>.  
+</footer>    
 </div>
+
+</div>
+
 
 
 </body></head></html>

@@ -8,11 +8,18 @@
 
 body{
 		background-color: #efefef;
+		
 }
 ul {
   list-style-type: none;
 }
-
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+}
 .row {
      margin-right: 0; 
      margin-left: 0; 
@@ -21,8 +28,10 @@ ul {
 
 }
 .container-fluid {
-     padding-right: 0; 
-     padding-left: 0; 
+     padding-right: 0!important; 
+     padding-left: 0!important; 
+     margin-left: 0;
+     margin-right:0;
 }	
 
 .demo-main{
