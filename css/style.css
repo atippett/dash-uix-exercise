@@ -184,3 +184,30 @@ footer a {
     /* background-color: #fff; */
     background-color: transparent;
 }
+.mdl-card__title-text.membership-title{
+  color: #757575;
+}
+
+.mdl-card__title-text .membership-expire{
+  background-color: #4CAF50;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #efefef;
+  font-size: smaller;
+}
+
+/* Members in Membership Section */
+.members{
+  padding: 1em;
+  display: block;
+}
+.member-new{
+  height: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.member-new-btn{
+  margin: 0;
+}
