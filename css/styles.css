@@ -13,13 +13,25 @@ body{
 ul {
   list-style-type: none;
 }
+
+/* Set black background color, white text and some padding */
 footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 100px;
-    width: 100%;
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   background:#999;
 }
+
+#mainWindow_{
+	margin-bottom: 30em;
+}
+
+#baseWindow_{
+	margin-bottom: 500px;
+}
+
 .row {
      margin-right: 0; 
      margin-left: 0; 

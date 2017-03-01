@@ -1,0 +1,186 @@
+body{
+  background-color: #efefef;
+}
+.main{
+  width: 100%;
+}
+.pull-right{
+  right: 0!important;
+  left: auto;
+  float:right!important;
+}
+.img-circle {
+  border-radius: 50%;
+}
+.my-font{
+  font-family: 'Montserrat', sans-serif!important;
+}
+.mdl-card {
+  display: block;
+  margin: auto;
+  width:80%;
+}
+.mdl-card__title-text{
+  font-size: 2.5vmin;
+  color: #efefef;
+}
+.mdl-card__menu.custom{
+  top: 0!important;
+  margin-right:-15px!important;
+}
+
+#homeIndexGroupList h2{
+	color: #d9d9d9!important;
+}
+.demo-card-wide > .mdl-card__title#soccor{
+  /*color: rgb(63,81,181);*/
+  height: 176px;
+  /*background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../theme_img/soccer_theme.jpg') center / cover;*/
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../theme_img/soccer_theme.jpg') center / cover;
+  /*background-color: #00796B;*/
+}
+.demo-card-wide > .mdl-card__title#camp {
+  /*color: rgb(63,81,181);*/
+  height: 176px;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../theme_img/camping.jpg') center / cover;
+  /*background-color: #00796B;*/
+}
+.demo-card-wide > .mdl-card__title#class {
+  /*color: rgb(63,81,181);*/
+  height: 176px;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../theme_img/class.jpg') center / cover;
+  /*background-color: #00796B;*/
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #d9d9d9; 
+  right:0!important; 
+}
+#homeIndexGroupList h2{
+  color: #d9d9d9!important;
+}
+.demo-card-wide > .mdl-card__title#soccor{
+  /*color: rgb(63,81,181);*/
+  height: 176px;
+  /*background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../theme_img/soccer_theme.jpg') center / cover;*/
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../theme_img/soccer_theme.jpg') center / cover;
+  /*background-color: #00796B;*/
+}
+.demo-card-wide > .mdl-card__title#camp {
+  /*color: rgb(63,81,181);*/
+  height: 176px;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../theme_img/camping.jpg') center / cover;
+  /*background-color: #00796B;*/
+}
+.demo-card-wide > .mdl-card__title#class {
+  /*color: rgb(63,81,181);*/
+  height: 176px;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../theme_img/class.jpg') center / cover;
+  /*background-color: #00796B;*/
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #d9d9d9;  
+}
+figcaption{
+  text-align: center;
+}
+
+.my-center-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+.card-body{
+  margin: 10px 20px;
+  min-height: 6em;
+  font-size: medium;
+}
+
+#avatar{
+  background-color: #00796B;
+  width: 70px;
+  height: 70px;
+  max-height: 70px;
+  max-width: 70px;
+}
+/* start of Calendar Icon */
+time.icon
+{
+  font-size: .8em; /* change icon size */
+  display: block;
+  position: relative;
+  width: 7em;
+  height: 7em;
+  background-color: #efefef;
+  overflow: hidden;
+}
+time.icon *
+{
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+}
+time.icon strong
+{
+  position: absolute;
+  top: 0;
+  padding: 0.4em 0;
+  font-size: 1.2em;
+  font-family: "Lato", sans-serif!important;
+  color: #efefef;
+  background-color: #757575;
+}
+
+time.icon em
+{
+  font-family: "Lato", sans-serif!important;
+  position: absolute;
+  bottom: 0.1em;
+  color: #757575;
+}
+
+time.icon span
+{
+  font-family: "Lato", sans-serif!important;
+  font-size: 1.5em;
+  /*letter-spacing: -0.01em;*/
+  margin-top: 2.1em;
+  color: #2f2f2f;
+}
+/* End of Calendar Icon */
+
+footer a {
+  text-decoration: none;
+}
+
+
+
+/* PAGE FOR MEMBERSHIP */
+.membership-owner{
+  margin-top: 0!important;
+}
+.member-container{
+  /*height: 10em;*/
+
+  display: flex;
+  align-items: center;
+  justify-content: center 
+}
+.member-profile{
+
+  margin: 0;
+}
+.contact-info-profile{
+  margin-left: -3em;
+}
+
+.profile-table {
+    position: relative;
+    /* border: 1px solid rgba(0,0,0,.12); */
+    border: none!important;
+    width: 100%;
+    /* background-color: #fff; */
+    background-color: transparent;
+}

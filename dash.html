@@ -8,8 +8,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -29,245 +27,11 @@
       <title>Welcome to Arena Sports DASH - Schedules, standings, team payment and more!</title>
   
   
-<body data-gr-c-s-loaded="true" class="reset-this"><div id="ajaxLoading"></div>
-
-<script type="text/javascript">
-        
-        /************************************************
-         * JS Begin CustomerEditModule Class Definition *
-         ************************************************/
-        
-        /**
-         * Constructor
-         */
-        CustomerEditModule = function(selector){
-          
-          this.$elem = $j(selector);
-          
-          this.currentURL = '?action=user_edit&CEMAction=1';
-          
-          var selfRef = this;
-          
-          var template = $j('.panel-template').clone();
-          template.removeClass('panel-template');
-          this.panelTemplate = template;
-          $j('.panel-template').remove();
-          
-          this.$elem.find('.buttonSaveChanges').click(function(event){
-            selfRef.saveData();
-          });
-          
-          /* Add JS enhancements to form */
-          selfRef.$elem.find('input[name="dob"]').inputmask('99/99/9999');
-          $j('#mobileCarrier').addClass('form-control');
-          
-          selfRef.$elem.find('#useMyContactInfo').click(function(event){
-            if($j(this).prop('checked')){
-              selfRef.$elem.find('.contactInfo').hide();
-            }
-            else{
-              selfRef.$elem.find('.contactInfo').show();
-            }
-          });
-          
-          // Add 'requestActivation' event listener
-          $j(document).on('CEM_requestActivation', function(event, params){
-            /* Validate activation request */
-            if(!params.customerID) throw "Missing 'customerID' parameter in CEM_requestActivation event";
-            if(!params.action) throw "Missing 'action' parameter in CEM_requestActivation event";
-            if(params.action !== 'edit' && params.action !== 'addChild'){
-              throw "Invalid 'action' parameter supplied for CEM_requestActivation event";
-            }
-            if(params.action === 'edit' && typeof params.isChild === 'undefined'){
-              throw "Missing 'isChild' parameter in CEM_requestActivation event";
-            }
-
-            /* Begin Activation */
-            selfRef.$elem.find('.modal-title').hide(); // Hide title so we can show appropriate one
-
-            $j('#customerEditModule').modal('show');
-            if(params.action === 'edit'){
-              selfRef.$elem.find('.title-edit').show();
-              selfRef.$elem.find('#resetPasswordControl').show();
-              CustomerEditModule.getInstance().refreshData(params.customerID);
-              (params.isChild) ? selfRef.$elem.find('.useMyContactInfoInput').show() : selfRef.$elem.find('.useMyContactInfoInput').hide();
-            }
-            // addChild action
-            else{
-              selfRef.$elem.find('.title-addChild').show(); // Show 'Add Child' title
-              selfRef.$elem.find('.nav-tabs li:eq(0) a').tab('show'); // Switch to first tab
-              selfRef.$elem.find('#resetPasswordControl').hide();
-              CustomerEditModule.getInstance().refreshData(params.customerID, true); // Default to currently logged in parent data
-            }
-          });
-          
-        };
-            
-        /**
-         * Refresh the preset data within the customer edit/add form
-         */
-        CustomerEditModule.prototype.refreshData = function(customerID, isAddChildForm){
-          
-          var selfRef = this;
-          
-          isAddChildForm = (typeof isAddChildForm === "undefined") ? false : isAddChildForm;
-          
-          this.clearMessages();
-  
-          $j.post(selfRef.currentURL + '&fetchCustomerData=1&t=1', {'customerID': customerID}, function(response){
-
-            $j.post(selfRef.currentURL + '&fetchCustomFields=1', {'customerID': customerID}, function(response){
-              $j('#misc').html(response);
-            });
-            
-            selfRef.$elem.find('.modal-title span').text(response.data.customer.firstName + ' ' + response.data.customer.lastName);
-            selfRef.$elem.find('input[name="customerID"]').val(customerID);
-            //selfRef.$elem.find('input[name="useMyContactInfo"]').val(response.data.customer.useMyContactInfo);
-            $j.each(response.data.customer, function(key, value){
-              
-              // Make sure loop handles checkboxes correctly
-              if(selfRef.$elem.find('input[name="'+key+'"][type="checkbox"]').length > 0){
-                selfRef.$elem.find('input[name="'+key+'"]').prop('checked', (value == "1"));
-                return; // Return will behave as 'continue'
-              }
-              
-              selfRef.$elem.find('input[name="'+key+'"][type="text"]').val(value);
-              selfRef.$elem.find('select[name="'+key+'"]').val(value);
-              
-            });
-            
-            // Special case for handling 'emailRemindersOK' since it's a radio button input
-            var erBoxToCheck = (response.data.customer.emailRemindersOK != "0") ? '#emailRemindersOKTrue' : '#emailRemindersOKFalse';
-            selfRef.$elem.find(erBoxToCheck).prop('checked', true);
+<body data-gr-c-s-loaded="true" class="reset-this">
 
 
 
-
-            if(response.data.customer.useMyContactInfo){
-               selfRef.$elem.find('.contactInfo').hide();
-              $j('input[name="useMyContactInfo"]').click();
-            } else {
-              selfRef.$elem.find('.contactInfo').show(); // Show contactInfo inputs by default
-            }
-
-            selfRef.$elem.find('input[name="dob"]').attr('disabled', true);
-           
-            selfRef.$elem.find('input[name="addingNewChild"]').val(0);  
-            if(isAddChildForm){
-              selfRef.$elem.find('input[name="addingNewChild"]').val(1);
-              selfRef.$elem.find('input[name="firstName"]').val('');
-              selfRef.$elem.find('input[name="dob"]').attr('disabled', false);
-              selfRef.$elem.find('input[name="dob"]').val('');
-            }
-             
-          }).fail(function(){
-            selfRef.$elem.modal('hide');
-          });
-          
-        };
-        
-        /**
-         * Save the data within the customer Edit/Add form
-         */
-        CustomerEditModule.prototype.saveData = function(){
-          var selfRef = this;
-          this.clearMessages();
-          
-          var formData = this.$elem.find('form').serialize();         
-          $j.post(selfRef.currentURL + '&saveCustomerData=1', formData, function(response){
-            if(!response.success){
-              $j(response.errors).each(function(index, message){
-                selfRef.$elem.find('.modal-messageOutput').append('<div class="alert alert-danger">' + message + '</div>');
-              });
-            }
-            else{
-              selfRef.$elem.modal('hide');
-              $j(document).trigger('CEM_updateComplete', response.data.customerID);
-            }
-          
-          });
-        };
-        
-        /**
-         * Clear the message output
-         */
-        CustomerEditModule.prototype.clearMessages = function(){
-          this.$elem.find('.modal-messageOutput').html('');
-        };
-                
-        /**
-         * Static Stuff
-         */
-        CustomerEditModule.instance = new CustomerEditModule('#customerEditModule');
-        
-        CustomerEditModule.getInstance = function(){
-          return CustomerEditModule.instance;
-        };
-        
-        /**********************************************
-         * JS End CustomerEditModule Class Definition *
-         **********************************************/
-        
-      </script>
-    <script type="text/javascript">
-
-  $j(document).ready(function(event){
-    // Wire up 'Edit Profile' buttons for child profiles
-    $j('#addChildButton').click(function(event){
-      $j(document).trigger('CEM_requestActivation', {'action': 'addChild', 'customerID': 24625});
-    });
-
-    // Wire up event listener for when profile edit module completes a successful save
-    $j(document).on('CEM_updateComplete', function(event, data){
-      location.reload(true); // Force reload without using cache
-    });
-  });
-</script>
-
-
-                                
-<script type="text/javascript">
-  $j(function() {
-
-    $j(".decline-team-invite").click(function(event) {
-      event.preventDefault();
-
-      var id = $j(this).data("request-id");
-      var team = $j(this).data("request-team");
-      var customerID = $j(this).data("customer-id");
-
-      // Sanity check...
-      if(id === undefined || team === undefined) {
-        return true;
-      }
-
-      if(!confirm("This will decline your invite for \"" + team + "\" and you will need to reapply.\nAre you sure you wish to continue?")) {
-        return false;
-      }
-
-      $j.post("?action=teamjoin-pending", {request_id: id, customer_id: customerID, declined: true}, function(response) {
-
-      });
-
-    });
-  });
-</script>
-<script type="text/javascript">
-
-  $j(document).ready(function(event){
-    // Wire up 'Edit Profile' buttons for child profiles
-    $j('#addChildButton').click(function(event){
-      $j(document).trigger('CEM_requestActivation', {'action': 'addChild', 'customerID': 24625});
-    });
-
-    // Wire up event listener for when profile edit module completes a successful save
-    $j(document).on('CEM_updateComplete', function(event, data){
-      location.reload(true); // Force reload without using cache
-    });
-  });
-</script>
-
-<div id="baseWindow">
+<div id="baseWindow_">
   <!-- Adding a container div so that we can easily hide all nav items with javascript -->
 
 
@@ -275,7 +39,7 @@
   <!-- <div class="side-social">Facebook</div>  TODO.. --> 
 
 
-<div id="mainWindow" class="container-fluid"> 
+<div id="mainWindow_" class="container-fluid"> 
 
     
     
@@ -285,6 +49,8 @@
 <div class="top-menu">
   <!-- Simple header with scrollable tabs. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
@@ -314,9 +80,9 @@
       <a href="#cart" class="mdl-layout__tab"><span class="mdl-badge" data-badge="4">Cart</span></a>
     </div>
   </header>
-  <div class="mdl-layout__drawer">
+  <!-- <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Dash</span>
-  </div>
+  </div> -->
   <main class="mdl-layout__content">
     <section class="mdl-layout__tab-panel is-active" id="events">
       <div class="page-content">
@@ -785,11 +551,22 @@
   </main>
 </div>
 
-</div>
+</div><!-- End of Top Menu-->
 
 
+
+<footer class="footer navbar-fixed-bottom">
+    Call (425) 885-4881 or <a href="https://apps.dashplatform.com/beta/dash/index.php?action=support">email us</a>
+    © 2017 <a href="http://www.dashplatform.com/">DASH Platform</a>.  
+</footer>    
 
 </div> <!-- END of #mainWindow-->
+
+
+
+
+
+</div>
 
 
 <!-- Dialog Handling for Add Family Member -->
@@ -856,26 +633,13 @@
 <!-- END OF MATERIAL Avatar-->
 
 
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fceb57b065","applicationID":"10420482,10907248","transactionName":"YQRTZEVRWRJRVEVcW1hOckVERFgMH39eWFEZCF9UUkg=","queueTime":0,"applicationTime":624,"atts":"TUNEEg1LSk0SVhMPT0sc","errorBeacon":"bam.nr-data.net","agent":""}</script>
-
-<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./dash_files/ao6eUeuGXQq.html" style="border: none;"></iframe></div></div></div>
-
-
-</div>
-
-
-<div class="row">
-<div class="container">
-<footer style="min-height: 100px; margin-top: 100px; text-align: center;;">
-    Call (425) 885-4881 or <a href="https://apps.dashplatform.com/beta/dash/index.php?action=support">email us</a>
-    © 2017 <a href="http://www.dashplatform.com/">DASH Platform</a>.  
-</footer>    
-</div>
-
-</div>
 
 
 
-</body></head></html>
+</body>
+
+
+
+</head></html>
 
 
