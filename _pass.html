@@ -93,9 +93,13 @@
 
 <div class="mdl-grid dash-body"  >
 
-  <div class="mdl-cell mdl-cell--4-col" >
+  <div class="mdl-cell mdl-cell--12-col" >
 
 
+  <div class="no-passes" >
+    <h2>No Pass</h2>
+    <div>Please add new</div>
+  </div>
 
 
       
@@ -211,51 +215,6 @@
 
 
 
-
-<!-- Dialog Handling for Add Family Member -->
-  <dialog class="mdl-dialog" style="min-width: 50%;">
-    <h4 class="mdl-dialog__title">Add Family Member</h4>
-    <div class="mdl-dialog__content">
-      <form action="#">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          
-          <label class="mdl-textfield__label" for="lastName">Last Name</label>
-          <input class="mdl-textfield__input" type="text" id="lastName">
-
-        </div>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <label class="mdl-textfield__label" for="firstName">First Name</label>
-          <input class="mdl-textfield__input" type="text" id="firstName">
-        </div>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <label class="mdl-textfield__label" for="dob">Date Of Birth</label>
-          <input class="mdl-textfield__input" type="text" id="dob" placeholder="mm/dd/yyyy">
-        </div>
-      </form>
-    </div>
-    <div class="mdl-dialog__actions">
-      <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary send">Add</button>
-      <button class="mdl-button mdl-js-button mdl-js-ripple-effect closewindow">
-        Close
-      </button>
-    </div>
-  </dialog>
-<script>
-    var dialog = document.querySelector('dialog');
-    var showDialogButton = document.querySelector('#show-dialog');
-    if (! dialog.showModal) {
-      // dialogPolyfill.registerDialog(dialog);
-    }
-    showDialogButton.addEventListener('click', function() {
-      dialog.showModal();
-    });
-    dialog.querySelector('.closewindow').addEventListener('click', function() {
-      dialog.close();
-    });
-    dialog.querySelector('.send').addEventListener('click', function() {
-      dialog.close();
-    });
-</script>
 
 
 </body>

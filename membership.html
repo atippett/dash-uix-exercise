@@ -8,25 +8,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>Welcome to Arena Sports DASH - Schedules, standings, team payment and more!</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.min.css" />
+    <!-- <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.min.css" /> -->
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css" />
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./css/fa/css/font-awesome.min.css" />
 </head>
 
 <body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<!-- Start of Social -->
+<ul class='social'>
+  <li>
+    <a class="fa fa-facebook" href="#">    
+      <span class="my-font">Facebook</span>
+    </a> 
+  </li>
+  
+  <li>
+    <a class="fa fa-twitter" href="#">
+      <span class="my-font">Twitter</span>
+    </a>
+  </li>
+    
+  <li>
+    <a class="fa fa-google-plus" href="#">
+    <span class="my-font">Google Plus</span>
+    </a> 
+  </li>
+  
+</ul>
+<!-- End of Social -->
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header ">
         
-        <header class="mdl-layout__header mdl-layout__header--scroll">
-          <div class="mdl-layout__header-row">
+        <header class="mdl-layout__header mdl-layout__header--scroll" >
+          <div class="mdl-layout__header-row " >
             <!-- Title -->
-            <span class="mdl-layout-title">DASH</span>
+            <span class="mdl-layout-title my-font">DASH</span>
             <!-- Add spacer, to align navigation to the right -->
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation -->
-            <nav class="mdl-navigation" style="margin-right: 5em;">
+            <nav class="mdl-navigation my-font dash-menu " style="margin-right: 5em;">
               <a class="mdl-navigation__link " href="./event.html">Event</a>
-              <a class="mdl-navigation__link mdl-layout__tab is-active" href="/">Memebership</a>
+              <a class="mdl-navigation__link dash-menu-active" href="./membership.html">Memebership</a>
               <a class="mdl-navigation__link " href="./register.html">Register</a>
               <a class="mdl-navigation__link " href="./pass.html">Pass</a>
               <a class="mdl-navigation__link " href="./cart.html">Cart</a>
@@ -64,11 +89,12 @@
 
 
 
+
 <div class="main">
 
-<div class="mdl-grid "  >
+<div class="mdl-grid dash-body"  >
 
-  <div class="mdl-cell mdl-cell--5-col" >
+  <div class="mdl-cell mdl-cell--12-col" >
 
   <div class="member-container" >
 
@@ -103,7 +129,7 @@
       </tbody>
     </table>
     <button class="mdl-button mdl-js-button mdl-button--primary pull-right" >
-      Editt My Profile
+      Edit My Profile
     </button>
         
     </div>
@@ -116,39 +142,21 @@
       
   </div>
 
-<div class="mdl-cell mdl-cell--6-col">
-  <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="top:10%;">
+<div class="mdl-cell mdl-cell--12-col">
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp" >
     <div class="mdl-card__title">
-      <h2 class="mdl-card__title-text membership-title my-font">
+      <h2 class="mdl-card__title-text membership-title my-font " style="margin-top: 1em; display: block;  margin: auto; padding-top:1em;">
         Family Membership &nbsp;
         <span class="membership-expire">Expires: Mar 18, 2020</span>
       </h2>
     </div>
     <div class="mdl-card__supporting-text fam-membership my-font">
-    <p>
-      This section is to display benefits of owned Membership, eg. Family Membership. Explain what they can do with it, what is limited, and etc.
-    </p>
-      
-    
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect ">
-        See Member Benefits
-      </a>
-      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect pull-right "
-      href="https://apps.dashplatform.com/beta/dash/index.php?action=Home/index&amp;company=arenasports#membershipModal" role="button" data-toggle="modal">
-        Renew Membership
-      </a>
-    </div>
-  </div>  
-</div>
 
-  
-</div>
+<!-- start of My Members -->
 
 <div class="" style="background-color: #fff;">
   
-<!-- 
+  <!-- 
   <h2 class="my-font" >
     My Members
   </h2> -->
@@ -162,58 +170,101 @@
     
 
     
-    <div class="mdl-cell mdl-cell--3-col members">
-        <div class="member-profile-photo" style="height:100px; width:100px; margin: auto;">
+    <div class="mdl-cell mdl-cell--4-col members">
+        <div class="member-profile-photo" style="height:60px; width:60px; margin: auto;">
           Maria Ewing
         </div>
         <div class="my-font" style="text-align: center;">Maria Ewing</div>
     </div>
 
-    <div class="mdl-cell mdl-cell--3-col members">
-        <div class="member-profile-photo" style="height:100px; width:100px; margin: auto;">
+    <div class="mdl-cell mdl-cell--4-col members">
+        <div class="member-profile-photo" style="height:60px; width:60px; margin: auto;">
           Elliot Tippett
         </div>
         <div class="my-font" style="text-align: center;">Elliot Tippett</div>
     </div>
 
-    <div class="mdl-cell mdl-cell--3-col members">
-        <div class="member-profile-photo" style="height:100px; width:100px; margin: auto;">
+    <div class="mdl-cell mdl-cell--4-col members">
+        <div class="member-profile-photo" style="height:60px; width:60px; margin: auto;">
           Wyatt Tippett
         </div>
         <div class="my-font" style="text-align: center;">Wyatt Tippett</div>
     </div>
 
-    <div class="mdl-cell mdl-cell--3-col members">
-        <div class="member-profile-photo" style="height:100px; width:100px; margin: auto;">
+    <div class="mdl-cell mdl-cell--4-col members">
+        <div class="member-profile-photo" style="height:60px; width:60px; margin: auto;">
           Eleanor Haugen
         </div>
         <div class="my-font" style="text-align: center;">Eleanor Haugen</div>
     </div>
 
-    <div class="mdl-cell mdl-cell--3-col members">
-        <div class="member-profile-photo" style="height:100px; width:100px; margin: auto;">
+    <div class="mdl-cell mdl-cell--4-col members">
+        <div class="member-profile-photo" style="height:60px; width:60px; margin: auto;">
           Aden Tippett
         </div>
         <div class="my-font" style="text-align: center;">Aden Tippett</div>
     </div>
 
-    <div class="mdl-cell mdl-cell--3-col members" >
-        <div class="member-profile-photo" style="height:100px; width:100px; margin: auto;">
+    <div class="mdl-cell mdl-cell--4-col members" >
+        <div class="member-profile-photo" style="height:60px; width:60px; margin: auto;">
           Luci Haugen
         </div>
         <div class="my-font" style="text-align: center;">Luci Haugen</div>
     </div>
 
-    <div class="mdl-cell mdl-cell--3-col member-new">
+    <div class="mdl-cell mdl-cell--4-col members" >
+        <div class="member-profile-photo" style="height:60px; width:60px; margin: auto;">
+          Boo Haugen
+        </div>
+        <div class="my-font" style="text-align: center;">Boo Haugen</div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--4-col members" >
+        <div class="member-profile-photo" style="height:60px; width:60px; margin: auto;">
+          Todd Haugen
+        </div>
+        <div class="my-font" style="text-align: center;">Todd Haugen</div>
+    </div>    
+
+
+
+    <div class="mdl-cell mdl-cell--4-col">
+      <div class=" members member-new">
         <button class="mdl-button mdl-js-button mdl-button--fab member-new-btn" id="show-dialog" style="margin: auto;">
           <i class="material-icons">add</i>
         </button>
+      </div>
+        
 
     </div>
 
 
   </div>
 </div>
+
+
+<!-- end of My Members -->
+
+
+      
+    
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect ">
+        See Member Benefits
+      </a>
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent pull-right "
+      href="https://apps.dashplatform.com/beta/dash/index.php?action=Home/index&amp;company=arenasports#membershipModal" role="button" data-toggle="modal">
+        Renew Membership
+      </a>
+    </div>
+  </div>  
+</div>
+
+  
+</div>
+
+
 
 
 
@@ -341,7 +392,10 @@
       </form>
     </div>
     <div class="mdl-dialog__actions">
-      <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary send">Add</button>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent send">
+        Add
+      </button>
+      
       <button class="mdl-button mdl-js-button mdl-js-ripple-effect closewindow">
         Close
       </button>
