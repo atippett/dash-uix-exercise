@@ -443,3 +443,8 @@ footer a {
 .mdl-data-table tbody tr.is-selected {
     background-color: rgb(255,171,64);
 }
+
+.dash{
+  background-color: transparent!important;
+  color: rgb(255,171,64);
+}
