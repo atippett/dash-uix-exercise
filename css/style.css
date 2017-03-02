@@ -426,4 +426,20 @@ footer a {
   margin: auto;
   border-radius: 10px;
   padding: 3em;
+  color: #757575;
+}
+
+.add-to-cart-btn{
+  text-decoration: none;
+  background-color: #757575;
+  color: #efefef;
+  padding: .3em;
+  border-radius: 1em;
+  margin-top: .5em;
+}
+.add-to-cart-btn:hover{
+  background-color: #919191;
+}
+.mdl-data-table tbody tr.is-selected {
+    background-color: rgb(255,171,64);
 }
