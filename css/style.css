@@ -431,14 +431,14 @@ footer a {
 
 .add-to-cart-btn{
   text-decoration: none;
-  background-color: #757575;
-  color: #efefef;
+  background-color: rgb(255,171,64);
+  color: #757575;
   padding: .3em;
   border-radius: 1em;
   margin-top: .5em;
 }
 .add-to-cart-btn:hover{
-  background-color: #919191;
+  background-color: #F48024;
 }
 .mdl-data-table tbody tr.is-selected {
     background-color: rgb(255,171,64);
